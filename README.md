@@ -1,1 +1,2 @@
 # Paiza_C_LevelUP_JS
+paizaのCランクレベルアップメニューJavaScriptの回答です。
