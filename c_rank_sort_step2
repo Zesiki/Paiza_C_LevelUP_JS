@@ -1,0 +1,21 @@
+const fs = require("fs");
+const input = fs.readFileSync("/dev/stdin", "utf-8").trim();
+
+const lines = input.split("\n");
+const n = Number(lines[0]);
+const a = [];
+
+for(let i = 1; i <= n; i++)
+{
+    a.push(Number(lines[i]));
+}
+
+a.sort(
+    function comparefunc(a,b){
+    return b - a;
+});
+
+for(let i = 0; i < n; i++)
+{
+    console.log(a[i]);
+}
