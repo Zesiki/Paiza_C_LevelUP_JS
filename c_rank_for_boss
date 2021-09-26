@@ -1,0 +1,23 @@
+const fs = require("fs");
+const input = fs.readFileSync("/dev/stdin", "utf-8").trim();
+
+const lines = input.split("\n");
+const numbers = lines[0].split(" ");
+const N = Number(numbers[0]);
+const M = Number(numbers[1]);
+const K = Number(numbers[2]);
+
+for(var i = 1; i <= N; i++)
+{   
+    let answer = Number(0);
+    const writtenNumbers = lines[i].split(" ");
+    
+    for(var j = 0; j < M; j++)
+    {
+        if(Number(writtenNumbers[j]) === K)
+        {
+            answer = answer + 1;
+        }
+    }
+    console.log(answer);
+}
