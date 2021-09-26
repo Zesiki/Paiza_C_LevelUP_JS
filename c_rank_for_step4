@@ -1,0 +1,23 @@
+const fs = require("fs");
+const input = fs.readFileSync("/dev/stdin", "utf-8").trim();
+
+const lines = input.split("\n");
+const m = Number(lines[0]);
+const n = Number(lines[m + 1]);
+
+for(var i = 1; i <= m; i++)
+{
+    let letter = lines[i];
+    
+    for(var j = m + 2; j < m+n+2; j++)
+    {
+        let word = lines[j];
+        
+        if(word.includes(letter) === true)
+        {
+            console.log("YES");
+        } else {
+            console.log("NO");
+        }
+    }
+}
